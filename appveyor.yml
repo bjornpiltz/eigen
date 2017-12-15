@@ -1,0 +1,20 @@
+version: 1.0.{build}
+
+environment:
+  matrix:
+    - GENERATOR: "Visual Studio 15 2017"
+      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+    
+clone_folder: c:\dev\src
+
+
+build_script:
+  - cd c:\dev
+  - mkdir build
+  - cd build
+  - cmake -G"%GENERATOR%" ..
+  - ctest -C Release -D Experimental
+build:
+  parallel: true
+  verbosity: minimal
+
