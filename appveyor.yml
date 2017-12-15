@@ -1,7 +1,7 @@
 version: 1.0.{build}
 
 environment:
-  EIGEN_CTEST_ARGS:-j4
+  EIGEN_CTEST_ARGS: -j4
   matrix:
     - GENERATOR: "Visual Studio 15 2017"
       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
