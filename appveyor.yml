@@ -1,6 +1,7 @@
 version: 1.0.{build}
 
 environment:
+  EIGEN_CTEST_ARGS:-j4
   matrix:
     - GENERATOR: "Visual Studio 15 2017"
       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
@@ -9,6 +10,7 @@ clone_folder: c:\dev\src
 
 
 build_script:
+  - echo EIGEN_CTEST_ARGS: %EIGEN_CTEST_ARGS%
   - cd c:\dev
   - mkdir build
   - cd build
