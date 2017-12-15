@@ -15,7 +15,3 @@ build_script:
   - cmake -G"%GENERATOR%" ..
   - ctest -C Release -D Experimental
 
-build:
-  parallel: true
-  verbosity: minimal
-
