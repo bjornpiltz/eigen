@@ -12,6 +12,6 @@ build_script:
   - cd c:\dev
   - mkdir build
   - cd build
-  - cmake -G"%GENERATOR%" ..
+  - cmake -G"%GENERATOR%" ../src
   - ctest -C Release -D Experimental
 
